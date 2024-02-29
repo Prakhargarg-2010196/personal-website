@@ -1,0 +1,23 @@
+<p>#incomplete</p>
+<blockquote>
+<p>Hough transform is a method used to detect and connect the disjoint edges.</p>
+</blockquote>
+<p><a href="https://www.youtube.com/watch?v=t1GXMvK9m84&amp;list=PLbwfaPBgAKFEPBg-OFzmjFWmRKKrYigLi&amp;index=20&amp;pp=iAQB">Hough Transform Explained with Example - YouTube</a></p>
+<p>In this method following steps are undertaken:</p>
+<ol>
+<li>First the points of known edges in spatial domain[^1]  are taken.</li>
+<li>Now as we know these points can be passing through infinite lines. So these points must be valid on some line following the following equation
+<code>y = mx + c</code>  , where m : slope of the line and c is the constant.</li>
+<li>To apply the Hough transform we must shift the coordinates (x,y) from xy-plane to (c,m) in hough-plane by using the following steps:
+<ol>
+<li>Put values in <code>c =y-mx</code> and put the (x,y) in this formula.</li>
+<li>Put c=0 to get value of m and m=0   to get value of c in obtained relation.</li>
+<li>Now we would have the points in hough plane i.e (c1,m1) , (c2,m2) and so on.</li>
+<li>Draw the graph of lines passing through these points by taking (0,c) on x and (m,0) on the x and y axis respectively.</li>
+<li>If the lines pass and intersect through a singular point then the points initially taken are all on the same edge or line.</li>
+<li>Calculate the equation of the intersection point (c,m) by placing the values in <code>y=mx+c</code></li>
+<li>You can also cross check for the edge points by placing it in the above equation found.</li>
+</ol>
+</li>
+</ol>
+<p>[^1]: Spatial domain implies to the XY coordinate plane or any 2D plane.</p>
